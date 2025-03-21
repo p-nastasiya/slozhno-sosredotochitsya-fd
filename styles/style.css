@@ -1,5 +1,277 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+body {
+	background-color: var(--bg-image);
+	color: var(--text-color);
+	font-family: var(--title-font-family);
 
-.page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+
+.page {}
+
+.decorated-zone {
+	position: relative;
+	/* max-height: 668px; */
+	background-image: var(--bg-image);
+	background-size: center;
+	font-family: var(--title-font-family);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	/* Делим на 3 колонки */
+	grid-template-rows: auto auto auto auto;
+	/* Автоматическая высота строк */
+	align-items: start;
+	/* Выравниваем элементы по левому краю */
+	padding: 10px;
+}
+
+.lamp {
+	/* position: absolute; */
+	grid-column: 3;
+	grid-row: 1;
+	font-family: var(--title-font-family);
+	text-transform: uppercase;
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	gap: 3px;
+	color: var(--header-nav-color);
+
+	/* padding-top: 10px;
+	padding-right: 10px; */
+	/* Стили для контейнера чекбокса */
+	.checkbox-container {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	/* Скрыть стандартный чекбокс */
+	.checkbox-container input[type="checkbox"] {
+		display: none;
+	}
+
+	/* Стиль для чекмарка */
+	.checkmark {
+		width: 21px;
+		height: 21px;
+		border-top: 1px solid var(--header-nav-color);
+		/* Граница сверху */
+		border-right: 1px solid var(--header-nav-color);
+		/* Граница справа */
+		position: relative;
+		background-color: transparent;
+		/* Прозрачный фон */
+	}
+
+	/* Круг внутри чекбокса */
+	.checkmark:before {
+		content: "";
+		width: 9px;
+		height: 9px;
+		background-color: var(--header-nav-color);
+		/* Цвет кружочка */
+		border-radius: 50%;
+		/* Кружок */
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.2s;
+		/* Плавный переход */
+		box-shadow:
+			0 0 0 1px rgba(255, 0, 112, 0.5),
+			0 0 0 2.5px rgba(255, 0, 112, 0.3),
+			0 0 0 4px rgba(255, 0, 112, 0.1);
+		visibility: var(--rec-visible);
+	}
+}
+
+.header__theme-menu {
+	grid-column: 3;
+	grid-row: 2;
+	padding-block-start: 39px;
+	/* padding-right: 10px; */
+	display: grid;
+	justify-content: end;
+	color: var(--header-nav-color);
+
+}
+
+.rec {
+	visibility: var(--rec-visible);
+}
+
+.header__theme-menu-list {
+	list-style: none;
+	padding: 0;
+}
+
+.header__theme-menu-item {
+	display: flex;
+	gap: 10px;
+}
+
+.header__theme-menu-button {
+
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-transform: lowercase;
+}
+
+.header__theme-menu-button:focus-visible {
+	outline: 2px solid var(--accent-color);
+}
+
+.header__theme-menu-button {
+	width: 70px;
+	/* Ширина рамки */
+	height: 27px;
+	/* Высота рамки */
+	border: none;
+	outline: none;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.header__theme-menu-button:focus {
+	border-bottom: 1px solid var(--header-nav-color);
+	/* 50% затухание */
+}
+
+.header__theme-menu-button:hover {
+	border: 1px solid var(--header-nav-color);
+	/* 50% затухание */
+}
+
+.header__theme-menu-button:disabled {
+	pointer-events: none;
+	/* Отключить наведение для выключенной кнопки */
+}
+
+.header__theme-menu-button_active {
+	pointer-events: none;
+	opacity: 1;
+	border: 1px solid var(--header-nav-color);
+	/* Пример стиля для активной кнопки */
+}
+
+.header__name {
+	inline-size: 355px;
+	grid-column: 1 / span 3;
+	grid-row: 3;
+	padding-block-start: 65px;
+	line-height: 82.5%;
+	font-size: var(--header-name-font-size);
+	text-shadow: 4px 4px 0 var(--text-shadow-color);
+	color: var(--header-name-color);
+}
+
+.header__title {
+	inline-size: 355px;
+	grid-column: 1 / span 3;
+	grid-row: 4;
+	margin-block-start: 55px;
+	writing-mode: horizontal-tb;
+	background-color: var(--header-bg-title);
+	color: var(--title-text-color);
+	font-weight: var(--title-text-font-weight);
+	font-size: var(--title-text-size);
+	line-height: 130%;
+	margin-bottom: 66px;
+}
+
+main {
+	background-color: var(--background-color);
+}
+
+section {
+	padding: 40px 10px;
+}
+
+.main-title {
+	font-family: var(--title-font-family);
+	font-size: var(--title-text-size);
+	font-weight: var(--title-text-font-weight);
+	text-decoration-color: var(--text-shadow-color);
+	line-height: 130%;
+	margin-bottom: 20px;
+}
+
+.main-title-accent {
+	background-color: var(--bg-title-color);
+	color: var(--title-text-color);
+	font-size: var(--title-text-size);
+}
+
+p {
+	color: var(--main-text-color);
+}
+
+.strong {
+	position: relative;
+	z-index: 0;
+}
+
+.strong-color {
+	position: absolute;
+	left: 2px;
+	top: 1px;
+	color: var(--main-text-accent);
+	z-index: -1;
+}
+
+.marker {
+	background-color: var(--bg-title-color);
+}
+
+.gallery {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex-direction: column;
+}
+
+.gallery img {
+	width: 100%;
+	/* Ширина 100% от родительского элемента */
+	height: auto;
+	/* Сохраняем пропорции */
+	max-width: 500px;
+	/* Ограничиваем максимальную ширину, например, 500px */
+}
+
+footer {
+	margin-block-start: 40px;
+	block-size: 668px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.footer__name {
+	line-height: 82.5%;
+	font-size: var(--header-name-font-size);
+	text-shadow: 4px 4px 0 var(--text-shadow-color);
+	color: var(--header-name-color);
+}
+
+
+/* Медиазапросы для адаптива */
+/* @media (min-width: 768px) {
+	.header {
+		grid-template-columns: 1fr 1fr;
+		Меняем сетку для больших экранов
+	}
+} */
+
+/* @media (min-width: 1024px) {
+	.header {
+		grid-template-columns: repeat(3, 1fr);
+		Модификации для ещё больших экранов
+	}
+} */
+
+/* Общие стили для цветового переключателя */

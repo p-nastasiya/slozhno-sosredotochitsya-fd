@@ -1,4 +1,23 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+	--bg-image: url(../images/cover-image-dark.png);
+	--background-color: var(--bg-color, #000028); /* Тёмная тема - фон */
+	--header-bg-title: #FF0070; /* Тёмная тема - фон заголовка */
+	--text-color: #ff0070; /* Тёмная тема - текст */
+	--accent-color: #DB00FF; /* Тёмная тема - акцент */	
+	--header-nav-color: #ff0070;
+	--header-name-color: #DB00FF; /* Тёмная тема - цвет заголовка */
+	--text-shadow-color: #ff0070; /* Тёмная тема - тень текста */
+	--header-name-font-family: 'IBM Plex mono', monospace;
+	--header-name-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	--header-name-font-weight: bold;
+	--header-name-font-height: 82.5%;
+	--title-font-family: 'IBM Plex mono', monospace;
+	--title-text-color: #000028;
+	--title-text-size: 18px;
+	--title-text-font-weight: 700;
+	--main-title-color: #ff0070; /* шрифт заголовка в секции*/
+	--main-title-accent: #000028; /* шрифт заголовка в р*/
+	--main-text-color: #f1b2ce;
+	--main-text-accent: #ff0070;
+}
+
