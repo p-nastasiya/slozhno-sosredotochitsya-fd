@@ -1,23 +1,26 @@
 :root {
-	--bg-image: url(../images/cover-image-dark.png);
+	--header-name-font-family: 'IBM Plex mono', monospace; /* Шрифт заголовка */ 
+	--title-text-font-weight: 700; /* толщина шрифта заголовков*/
+	--text-font-weight: 400; /* толщина шрифта текста*/
+	--title-font-height: 82.5%; /* толщина шрифта заголовка */ 
+	--title-font-family: 'IBM Plex mono', monospace; /* наименование шрифта заголовка 2 */ 
+	--text-size: 18px; /* размер шрифта */ 
+	--line-height: 23.2px;
+	--bg-image: url(../images/cover-image-dark.png); /* Тёмная тема - фон картинка */
 	--background-color: var(--bg-color, #000028); /* Тёмная тема - фон */
+	--bg-text-accent: transparent; /* фон выделения текста в Тёмной теме  */
 	--header-bg-title: #FF0070; /* Тёмная тема - фон заголовка */
 	--text-color: #ff0070; /* Тёмная тема - текст */
 	--accent-color: #DB00FF; /* Тёмная тема - акцент */	
-	--header-nav-color: #ff0070;
+	--header-nav-color: #ff0070; /* Тёмная тема - цвет текста меню */
+	--header-nav-color-rgb: 255, 0, 112;
 	--header-name-color: #DB00FF; /* Тёмная тема - цвет заголовка */
 	--text-shadow-color: #ff0070; /* Тёмная тема - тень текста */
-	--header-name-font-family: 'IBM Plex mono', monospace;
-	--header-name-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-	--header-name-font-weight: bold;
-	--header-name-font-height: 82.5%;
-	--title-font-family: 'IBM Plex mono', monospace;
-	--title-text-color: #000028;
-	--title-text-size: 18px;
-	--title-text-font-weight: 700;
-	--main-title-color: #ff0070; /* шрифт заголовка в секции*/
-	--main-title-accent: #000028; /* шрифт заголовка в р*/
-	--main-text-color: #f1b2ce;
-	--main-text-accent: #ff0070;
+	--main-title-color: #ff0070; /* цвет заголовка в секции*/
+	--title-text-color: #000028; /* цвет шрифта заголовка 2 */
+	--main-title-accent: #000028; /* цвет заголовка 3 на выделеном фоне*/
+	--bg-title-color: #ff0070; /* фон заголовка 3*/
+	--main-text-color: #f1b2ce; /* цвет текста в параграфе*/
+	--main-text-accent: #ff0070; /* цвет выделенного слова в параграфе*/
 }
 

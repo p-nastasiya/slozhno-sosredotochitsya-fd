@@ -5,19 +5,21 @@
 */
 
 :root.theme-light {
-	--bg-image: url(../images/cover-image-light.png);
-	--bg-color: #fff1f7;
+	--bg-image: url(../images/cover-image-light.png); /* Светлая тема - фон картинка */
+	--bg-color: #fff1f7; /* Светлая тема - фон*/
+	--bg-text-accent: #ff8dcb; /* фон выделения текста в Светлой теме */
+	--header-bg-title:  #FF8DCB; 	/* Светлая тема - фон заголовка*/
 	--text-color: #353430; 	/* Светлая тема - текст */
 	--accent-color: #FF8DCB; 	/* Светлая тема - акцент */
+	--header-nav-color: #353430; /* Светлая тема - цвет текста меню */
 	--header-name-color: #FFC2E6; 	/* Светлая тема - цвет заголовка */
 	--text-shadow-color: #FF8DCB; 	/* Светлая тема - тень текста */
-	--header-nav-color: #353430;
-	--header-bg-title:  #FF8DCB; 	/* Светлая тема - фон */
-	--main-title-color: #ff8dcb;
-	--main-title-accent: #000028;
-	--bg-title-color: #ff8dcb;
-	--main-text-color: #353430;
-	--main-text-accent: #ff8dcb;
+	--main-title-color: #353430; /* Светлая тема - цвет заголовка в секции*/
+	--title-text-color: #353430; /* Светлая тема - цвет шрифта заголовка 2 */
+	--main-title-accent: #353430; /* Светлая тема - цвет заголовка 3 на выделеном фоне*/
+	--bg-title-color: #ff8dcb; /* Светлая тема - фон заголовка 3*/
+	--main-text-color: #353430; /* Светлая тема - цвет текста в параграфе*/
+	--main-text-accent: #ff8dcb; /* Светлая тема - цвет выделенного слова в параграфе*/
 	--rec-visible: hidden;
 	/* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
@@ -27,26 +29,26 @@
 
 @media (prefers-color-scheme: light) {
 	:root {
-		--bg-image: url(../images/cover-image-light.png);		/* Светлая тема - фон */
-		--header-bg-title:  #FF8DCB;
-		--text-color: #353430;
-		/* Светлая тема - текст */
-		--accent-color: #FF8DCB;
-		/* Светлая тема - акцент */
-		--header-title-color: #FF8DCB;
-		/* Светлая тема - фон заголовка */
-		--header-name-color: #FFC2E6;
-		/* Светлая тема - цвет заголовка */
-		--text-shadow-color: #FF8DCB;
-		/* Светлая тема - тень текста */
-		--main-title-color: #353430;
+		--bg-image: url(../images/cover-image-light.png); /* Светлая тема - фон картинка */
+	--bg-color: #fff1f7; /* Светлая тема - фон*/
+	--bg-text-accent: #ff8dcb; /* фон выделения текста в Светлой теме */
+	--header-bg-title:  #FF8DCB; 	/* Светлая тема - фон заголовка*/
+	--text-color: #353430; 	/* Светлая тема - текст */
+	--accent-color: #FF8DCB; 	/* Светлая тема - акцент */
+	--header-nav-color: #353430; /* Светлая тема - цвет текста меню */
+	--header-nav-color-rgb: 53, 52, 48;
+	--header-name-color: #FFC2E6; 	/* Светлая тема - цвет заголовка */
+	--text-shadow-color: #FF8DCB; 	/* Светлая тема - тень текста */
+	--main-title-color: #353430; /* Светлая тема - цвет заголовка в секции*/
+	--title-text-color: #353430; /* Светлая тема - цвет шрифта заголовка 2 */
+	--main-title-accent: #353430; /* Светлая тема - цвет заголовка 3 на выделеном фоне*/
+	--bg-title-color: #ff8dcb; /* Светлая тема - фон заголовка 3*/
+	--main-text-color: #353430; /* Светлая тема - цвет текста в параграфе*/
+	--main-text-accent: #ff8dcb; /* Светлая тема - цвет выделенного слова в параграфе*/
+	--rec-visible: hidden;
 	}
-
 }
 
 .theme-light .page {
-	--bg-image: url(../images/cover-image-light.png);
-	/* Вам также нужно будет написать ряд подобных селекторов */
-	--main-title-color: #353430;
-	--text-shadow-color: #FF8DCB;
+	background-color: var(--bg-color);
 }

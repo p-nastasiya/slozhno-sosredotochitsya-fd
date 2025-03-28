@@ -1,100 +1,104 @@
 body {
-	background-color: var(--bg-image);
+	background-color: var(--background-color);
 	color: var(--text-color);
 	font-family: var(--title-font-family);
+}
 
+.header {
+	background-image: var(--bg-image);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	padding: 10px;
+	position: relative;
+	font-family: var(--title-font-family);
 }
 
 
-.page {}
+/* Правый верхний уголок */
+.cornered::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 10px;
+	right: 10px;
+	width: 25px;
+	height: 25px;
+	border-top: 1px solid var(--header-nav-color);
+	border-right: 1px solid var(--header-nav-color);
+}
 
-.decorated-zone {
-	position: relative;
-	/* max-height: 668px; */
-	background-image: var(--bg-image);
-	background-size: center;
-	font-family: var(--title-font-family);
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	/* Делим на 3 колонки */
-	grid-template-rows: auto auto auto auto;
-	/* Автоматическая высота строк */
-	align-items: start;
-	/* Выравниваем элементы по левому краю */
-	padding: 10px;
+/* Левый нижний уголок */
+.cornered::after {
+	content: '';
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+	border-bottom: 1px solid var(--header-nav-color);
+	border-left: 1px solid var(--header-nav-color);
 }
 
 .lamp {
-	/* position: absolute; */
-	grid-column: 3;
+	position: absolute;
+	right: 13px;
+	line-height: 26px;
 	grid-row: 1;
 	font-family: var(--title-font-family);
 	text-transform: uppercase;
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
-	gap: 3px;
+	gap: 5px;
 	color: var(--header-nav-color);
-
-	/* padding-top: 10px;
-	padding-right: 10px; */
-	/* Стили для контейнера чекбокса */
-	.checkbox-container {
-		display: flex;
-		align-items: center;
-		cursor: pointer;
-	}
-
-	/* Скрыть стандартный чекбокс */
-	.checkbox-container input[type="checkbox"] {
-		display: none;
-	}
-
-	/* Стиль для чекмарка */
-	.checkmark {
-		width: 21px;
-		height: 21px;
-		border-top: 1px solid var(--header-nav-color);
-		/* Граница сверху */
-		border-right: 1px solid var(--header-nav-color);
-		/* Граница справа */
-		position: relative;
-		background-color: transparent;
-		/* Прозрачный фон */
-	}
-
-	/* Круг внутри чекбокса */
-	.checkmark:before {
-		content: "";
-		width: 9px;
-		height: 9px;
-		background-color: var(--header-nav-color);
-		/* Цвет кружочка */
-		border-radius: 50%;
-		/* Кружок */
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		transition: all 0.2s;
-		/* Плавный переход */
-		box-shadow:
-			0 0 0 1px rgba(255, 0, 112, 0.5),
-			0 0 0 2.5px rgba(255, 0, 112, 0.3),
-			0 0 0 4px rgba(255, 0, 112, 0.1);
-		visibility: var(--rec-visible);
-	}
 }
 
-.header__theme-menu {
-	grid-column: 3;
-	grid-row: 2;
-	padding-block-start: 39px;
-	/* padding-right: 10px; */
-	display: grid;
-	justify-content: end;
-	color: var(--header-nav-color);
+/* Стили для контейнера чекбокса */
+.checkbox-container {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
 
+/* Скрыть стандартный чекбокс */
+.checkbox-container input[type="checkbox"] {
+	display: none;
+}
+
+/* Стиль для чекмарка */
+.checkmark {
+	width: 21px;
+	height: 21px;
+	position: relative;
+	background-color: transparent;
+}
+
+/* Круг внутри чекбокса */
+.checkmark:before {
+	content: "";
+	width: 9px;
+	height: 9px;
+	background-color: var(--header-nav-color);
+	/* Цвет кружочка */
+	border-radius: 50%;
+	/* Кружок */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.2s;
+	/* Плавный переход */
+	box-shadow:
+		0 0 0 1px rgba(255, 0, 112, 0.5),
+		0 0 0 2.5px rgba(255, 0, 112, 0.3),
+		0 0 0 4px rgba(255, 0, 112, 0.1);
+	visibility: var(--rec-visible);
+}
+
+
+.header__theme-menu {
+	padding-top: 65px;
 }
 
 .rec {
@@ -103,114 +107,126 @@ body {
 
 .header__theme-menu-list {
 	list-style: none;
-	padding: 0;
+	display: flex;
+	gap: 9px;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
-.header__theme-menu-item {
-	display: flex;
-	gap: 10px;
-}
+/* .header__theme-menu-item {
+} */
 
 .header__theme-menu-button {
-
+	position: relative;
+	width: 70px;
+	/* Ширина кнопки */
+	height: 27px;
+	/* Высота кнопки */
+	font-size: var(--text-size);
+	outline: none;
 	background: none;
 	border: none;
+	/* Без рамки по умолчанию */
 	cursor: pointer;
 	text-transform: lowercase;
 }
 
+
 .header__theme-menu-button:focus-visible {
-	outline: 2px solid var(--accent-color);
-}
-
-.header__theme-menu-button {
-	width: 70px;
-	/* Ширина рамки */
-	height: 27px;
-	/* Высота рамки */
-	border: none;
-	outline: none;
-	position: relative;
-	transition: all 0.3s ease;
-}
-
-.header__theme-menu-button:focus {
 	border-bottom: 1px solid var(--header-nav-color);
-	/* 50% затухание */
+	/* Рамка только снизу при фокусе */
 }
 
 .header__theme-menu-button:hover {
-	border: 1px solid var(--header-nav-color);
-	/* 50% затухание */
-}
-
-.header__theme-menu-button:disabled {
-	pointer-events: none;
-	/* Отключить наведение для выключенной кнопки */
+	border: 1px solid rgba(var(--header-nav-color-rgb), 0.4);
 }
 
 .header__theme-menu-button_active {
 	pointer-events: none;
-	opacity: 1;
+	/*Блокировка взаимодействия с активной кнопкой*/
 	border: 1px solid var(--header-nav-color);
-	/* Пример стиля для активной кнопки */
+	/* Рамка для активной кнопки */
+}
+
+.header__theme-menu-button:disabled {
+	pointer-events: none;
+}
+
+.strong:hover {
+	border-bottom: 1px solid var(--header-nav-color);
+}
+
+.strong:focus {
+	border: 1px solid var(--header-nav-color);
 }
 
 .header__name {
-	inline-size: 355px;
-	grid-column: 1 / span 3;
 	grid-row: 3;
 	padding-block-start: 65px;
-	line-height: 82.5%;
-	font-size: var(--header-name-font-size);
+	padding-bottom: 55px;
+	font-weight: var(--title-text-font-weight);
+	line-height: var(--title-font-height);
+	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	text-shadow: 4px 4px 0 var(--text-shadow-color);
 	color: var(--header-name-color);
 }
 
 .header__title {
-	inline-size: 355px;
-	grid-column: 1 / span 3;
 	grid-row: 4;
-	margin-block-start: 55px;
 	writing-mode: horizontal-tb;
+	margin-bottom: 56px;
+
+}
+
+.title-decor {
 	background-color: var(--header-bg-title);
 	color: var(--title-text-color);
 	font-weight: var(--title-text-font-weight);
-	font-size: var(--title-text-size);
-	line-height: 130%;
-	margin-bottom: 66px;
+	font-size: var(--text-size);
+
 }
 
 main {
 	background-color: var(--background-color);
+	padding: 0 10px 0;
 }
 
 section {
-	padding: 40px 10px;
+	margin-top: 50px;
+	font-family: var(--title-font-family);
+	line-height: var(--line-height);
 }
 
 .main-title {
-	font-family: var(--title-font-family);
-	font-size: var(--title-text-size);
+	font-size: var(--text-size);
 	font-weight: var(--title-text-font-weight);
-	text-decoration-color: var(--text-shadow-color);
-	line-height: 130%;
-	margin-bottom: 20px;
+	padding-bottom: 20px;
 }
 
-.main-title-accent {
-	background-color: var(--bg-title-color);
+.section-content-title {
+	margin-bottom: 10px;
+}
+
+.title-marker {
+	margin: 20px 0 10px 0;
+	background-color: var(--main-text-accent);
 	color: var(--title-text-color);
-	font-size: var(--title-text-size);
+	font-size: var(--text-size);
+	font-weight: var(--text-font-weight);
+	line-height: var(--line-height);
 }
 
 p {
+	margin-bottom: 20px;
 	color: var(--main-text-color);
+	font-weight: var(--text-font-weight);
+	font-size: var(--text-size);
 }
 
 .strong {
 	position: relative;
 	z-index: 0;
+	text-decoration: none;
 }
 
 .strong-color {
@@ -222,7 +238,7 @@ p {
 }
 
 .marker {
-	background-color: var(--bg-title-color);
+	background-color: var(--bg-text-accent);
 }
 
 .gallery {
@@ -236,42 +252,234 @@ p {
 
 .gallery img {
 	width: 100%;
-	/* Ширина 100% от родительского элемента */
 	height: auto;
-	/* Сохраняем пропорции */
-	max-width: 500px;
-	/* Ограничиваем максимальную ширину, например, 500px */
+	width: 100vw;
 }
 
 footer {
+	position: relative;
 	margin-block-start: 40px;
 	block-size: 668px;
 	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
+	background-color: var(--bg-color);
+	flex-wrap: nowrap;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .footer__name {
-	line-height: 82.5%;
-	font-size: var(--header-name-font-size);
-	text-shadow: 4px 4px 0 var(--text-shadow-color);
+	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+	line-height: var(--title-font-height);
 	color: var(--header-name-color);
 }
 
-
 /* Медиазапросы для адаптива */
-/* @media (min-width: 768px) {
-	.header {
-		grid-template-columns: 1fr 1fr;
-		Меняем сетку для больших экранов
-	}
-} */
 
-/* @media (min-width: 1024px) {
+
+@media (min-width: 768px) {
 	.header {
-		grid-template-columns: repeat(3, 1fr);
-		Модификации для ещё больших экранов
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 20px;
 	}
-} */
+
+	/* Правый верхний уголок */
+	.cornered::before {
+		top: 20px;
+		right: 20px;
+	}
+	
+	/* Левый нижний уголок */
+	.cornered::after {
+		bottom: 20px;
+		left: 20px;
+	}
+
+	.lamp {
+		right: 23px;
+	}
+
+	.header__theme-menu {
+		grid-column: 2;
+		padding-top: 170px;
+		margin-right: -8px;
+	}
+
+	.header__name {
+		grid-column: 1 / span 2;
+		padding-block-start: 173px;
+		padding-bottom: 162px;
+		font-weight: var(--title-text-font-weight);
+		margin-left: -10px;
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	}
+
+	.header__title {
+		grid-column: 2;
+		margin-bottom: 163px;
+	}
+
+	.grid-section {
+		margin: 0 10px 50px;
+	}
+
+	.grid-section-why {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 20px;
+	}
+
+	.main-title {
+		margin-top: 0;
+		grid-column: 1;
+		min-width: 236px;
+	}
+
+	.content-section-why {
+		grid-column: 2;
+		display: block;
+	}
+
+	section {
+		margin-top: 60px;
+	}
+
+	.grid-section-what {
+		display: block;
+	}
+
+	.grid-container-what {
+		display: block;
+	}
+
+	.grid-section-how {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		padding-top: 20px;
+
+	}
+
+	.content-section-how {
+		grid-column: 2;
+	}
+
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, auto);
+		gap: 20px;
+		/* расстояние между картинками */
+		margin-top: 20px;
+	}
+
+	.gallery img {
+		width: 100%;
+		/* ширина 100% от ячейки */
+		height: 100%;
+		/* высота 100% от ячейки */
+		object-fit: cover;
+		/* изображение заполняет ячейку, сохраняя пропорции */
+		object-position: center;
+		/* центрирование изображения внутри ячейки */
+	}
+
+	.img-sunset {
+		grid-column: 1 / 3;
+		/* занимает 1 и 2 столбцы */
+		grid-row: 1;
+		/* занимает первую строку */
+	}
+
+	.img-ice-cream {
+		grid-column: 3;
+		/* занимает 3 столбец */
+		grid-row: 1 / 3;
+		/* занимает первую и вторую строки */
+	}
+
+	.img-tape {
+		grid-column: 1;
+		/* занимает 1 столбец */
+		grid-row: 2 / 4;
+		/* занимает вторую и третью строки */
+	}
+
+	.img-street {
+		grid-column: 2 / 4;
+		/* занимает 2 и 3 столбцы */
+		grid-row: 3;
+		/* занимает третью строку */
+	}
+
+	.img-books {
+		grid-column: 2;
+		/* занимает 2 столбец */
+		grid-row: 2;
+		/* занимает вторую строку */
+	}
+
+	.footer__name {
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	}
+}
+
+/* Меняем сетку для больших экранов */
+@media (min-width: 1024px) {
+	.header {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		height: 100vh;
+		/*Высота контейнера по всему экрану (опционально)*/
+	}
+
+	.header__theme-menu {
+		grid-column: 2;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		/* Центрирование элементов внутри меню */
+	}
+	
+	.header__theme-menu-list {
+		display: flex;
+		/* Изменяем отображение списка на flex */
+		flex-direction: row;
+	}
+	
+	.header__name {
+		grid-column: 1 / span 3;
+		padding-block-start: 273px;
+		padding-bottom: 114px;
+		margin-left: -20px;
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	}
+
+	.header__title {
+		grid-column: 2 /span 3;
+		margin-block-end: 134px;
+		inline-size: 491px;
+		justify-self: end;
+	}
+
+	.content-section-why .content-section-how {
+		grid-column: 2 / 4;
+	}
+
+	.grid-container-what {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+	}
+
+	.main-title {
+		grid-column: 1;
+		max-width: 315px;
+	}
+
+	.footer__name {
+		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+	}
+}
 
 /* Общие стили для цветового переключателя */
