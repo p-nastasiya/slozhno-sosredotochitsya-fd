@@ -16,16 +16,16 @@
 	/* Тёмная тема - фон картинка */
 	--background-color: var(--bg-color, #000028);
 	/* Тёмная тема - фон */
-	--header-bg-title: #FF0070;
+	--header-bg-title: #ff0070;
 	/* Тёмная тема - фон заголовка */
 	--text-color: #ff0070;
 	/* Тёмная тема - текст */
-	--accent-color: #DB00FF;
+	--accent-color: #db00ff;
 	/* Тёмная тема - акцент */
 	--header-nav-color: #ff0070;
 	/* Тёмная тема - цвет текста меню */
 	--header-nav-color-rgb: 255, 0, 112;
-	--header-name-color: #DB00FF;
+	--header-name-color: #db00ff;
 	/* Тёмная тема - цвет заголовка */
 	--text-shadow-color: #ff0070;
 	/* Тёмная тема - тень текста */
@@ -41,4 +41,5 @@
 	/* цвет текста в параграфе*/
 	--main-text-accent: #ff0070;
 	/* цвет выделенного слова в параграфе*/
+	--rec-visible: visible;
 }
