@@ -3,6 +3,7 @@
 *,
 *::before,
 *::after {
+	
   box-sizing: border-box;
 }
 
@@ -20,6 +21,7 @@ h5,
 h6,
 p {
   margin: 0;
+	font-size: var(--text-size);
 }
 
 ul {
@@ -37,6 +39,6 @@ button,
 a {
   color: currentColor;
   font-family: inherit;
-  font-size: inherit;
+  font-size: var(--text-size);
   line-height: inherit;
 }

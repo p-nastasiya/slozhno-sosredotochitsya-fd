@@ -4,22 +4,29 @@ body {
 	font-family: var(--title-font-family);
 }
 
-.header {
+.page {
+	background-color: var(--bg-color);
 	background-image: var(--bg-image);
-	background-attachment: fixed;
 	background-size: cover;
-	background-position: center;
-	padding: 10px;
-	position: relative;
+	background-attachment: fixed;
+	background-position: top center;
 	font-family: var(--title-font-family);
 }
 
+main {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.header {
+	position: relative;
+	padding: 10px 10px 66px 10px;
+}
 
 /* Правый верхний уголок */
 .cornered::before {
 	content: '';
 	position: absolute;
-	display: block;
 	top: 10px;
 	right: 10px;
 	width: 25px;
@@ -45,7 +52,6 @@ body {
 	right: 13px;
 	line-height: 26px;
 	grid-row: 1;
-	font-family: var(--title-font-family);
 	text-transform: uppercase;
 	display: flex;
 	justify-content: flex-end;
@@ -96,7 +102,6 @@ body {
 	visibility: var(--rec-visible);
 }
 
-
 .header__theme-menu {
 	padding-top: 65px;
 }
@@ -113,20 +118,13 @@ body {
 	align-items: flex-end;
 }
 
-/* .header__theme-menu-item {
-} */
-
 .header__theme-menu-button {
 	position: relative;
 	width: 70px;
-	/* Ширина кнопки */
 	height: 27px;
-	/* Высота кнопки */
-	font-size: var(--text-size);
 	outline: none;
 	background: none;
 	border: none;
-	/* Без рамки по умолчанию */
 	cursor: pointer;
 	text-transform: lowercase;
 }
@@ -173,32 +171,22 @@ body {
 
 .header__title {
 	grid-row: 4;
-	writing-mode: horizontal-tb;
-	margin-bottom: 56px;
-
 }
 
 .title-decor {
 	background-color: var(--header-bg-title);
 	color: var(--title-text-color);
 	font-weight: var(--title-text-font-weight);
-	font-size: var(--text-size);
-
 }
 
-main {
-	background-color: var(--background-color);
-	padding: 0 10px 0;
-}
 
 section {
-	margin-top: 50px;
-	font-family: var(--title-font-family);
+	margin-top: 40px;
+	padding-bottom: 10px;
 	line-height: var(--line-height);
 }
 
 .main-title {
-	font-size: var(--text-size);
 	font-weight: var(--title-text-font-weight);
 	padding-bottom: 20px;
 }
@@ -208,19 +196,34 @@ section {
 }
 
 .title-marker {
-	margin: 20px 0 10px 0;
+	margin-bottom: 10px;
 	background-color: var(--main-text-accent);
 	color: var(--title-text-color);
-	font-size: var(--text-size);
 	font-weight: var(--text-font-weight);
 	line-height: var(--line-height);
 }
 
 p {
-	margin-bottom: 20px;
 	color: var(--main-text-color);
 	font-weight: var(--text-font-weight);
-	font-size: var(--text-size);
+}
+
+.content-section-why {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 20px;
+}
+
+.grid-container-what {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.content-section-how {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
 }
 
 .strong {
@@ -237,12 +240,8 @@ p {
 	z-index: -1;
 }
 
-.marker {
-	background-color: var(--bg-text-accent);
-}
 
 .gallery {
-	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -251,15 +250,14 @@ p {
 }
 
 .gallery img {
-	width: 100%;
 	height: auto;
-	width: 100vw;
+	max-width: 100%
 }
 
 footer {
 	position: relative;
 	margin-block-start: 40px;
-	block-size: 668px;
+	block-size: 100vh;
 	display: flex;
 	background-color: var(--bg-color);
 	flex-wrap: nowrap;
@@ -272,12 +270,20 @@ footer {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	line-height: var(--title-font-height);
 	color: var(--header-name-color);
+	text-shadow: 2px 2px 0 var(--text-shadow-color);
+}
+
+.mb20 {
+	margin-bottom: 20px;
 }
 
 /* Медиазапросы для адаптива */
-
-
 @media (min-width: 768px) {
+	main {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
 	.header {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -289,7 +295,7 @@ footer {
 		top: 20px;
 		right: 20px;
 	}
-	
+
 	/* Левый нижний уголок */
 	.cornered::after {
 		bottom: 20px;
@@ -311,7 +317,7 @@ footer {
 		padding-block-start: 173px;
 		padding-bottom: 162px;
 		font-weight: var(--title-text-font-weight);
-		margin-left: -10px;
+		margin-left: -13px;
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
 
@@ -320,29 +326,28 @@ footer {
 		margin-bottom: 163px;
 	}
 
-	.grid-section {
-		margin: 0 10px 50px;
-	}
 
 	.grid-section-why {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		column-gap: 20px;
+		gap: 20px;
 	}
 
 	.main-title {
-		margin-top: 0;
 		grid-column: 1;
-		min-width: 236px;
+		max-width: 236px;
 	}
 
 	.content-section-why {
 		grid-column: 2;
-		display: block;
+		display: grid;
+		gap: 20px;
 	}
 
 	section {
 		margin-top: 60px;
+		padding-bottom: 20px;
+		line-height: var(--line-height);
 	}
 
 	.grid-section-what {
@@ -350,14 +355,14 @@ footer {
 	}
 
 	.grid-container-what {
-		display: block;
+		display: grid;
+		gap: 20px;
 	}
 
 	.grid-section-how {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-		padding-top: 20px;
-
+		gap: 20px;
 	}
 
 	.content-section-how {
@@ -369,7 +374,6 @@ footer {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(3, auto);
 		gap: 20px;
-		/* расстояние между картинками */
 		margin-top: 20px;
 	}
 
@@ -430,7 +434,6 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		height: 100vh;
-		/*Высота контейнера по всему экрану (опционально)*/
 	}
 
 	.header__theme-menu {
@@ -438,15 +441,13 @@ footer {
 		padding: 0;
 		display: flex;
 		justify-content: center;
-		/* Центрирование элементов внутри меню */
 	}
-	
+
 	.header__theme-menu-list {
 		display: flex;
-		/* Изменяем отображение списка на flex */
 		flex-direction: row;
 	}
-	
+
 	.header__name {
 		grid-column: 1 / span 3;
 		padding-block-start: 273px;
@@ -466,10 +467,18 @@ footer {
 		grid-column: 2 / 4;
 	}
 
+	.section-content-title {
+		margin-bottom: 10px;
+	}
+
+	.mb20 {
+		margin-bottom: 20px;
+	}
+
 	.grid-container-what {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: 20px;
+		column-gap: 18px;
 	}
 
 	.main-title {
@@ -480,6 +489,7 @@ footer {
 	.footer__name {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
+
 }
 
 /* Общие стили для цветового переключателя */

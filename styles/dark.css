@@ -1,27 +1,43 @@
-
-
 :root.theme-dark {
 	--bg-image: url(../images/cover-image-dark.png);
-	--bg-color: #000028; /* Тёмная тема - фон */
-	--bg-text-accent: transparent; /* фон выделения текста в Тёмной теме  */
-	--header-bg-title: #FF0070; /* Тёмная тема - фон заголовка */
-	--text-color: #ff0070; /* Тёмная тема - текст */
-	--accent-color: #DB00FF; /* Тёмная тема - акцент */	
-	--header-nav-color: #ff0070; /* Тёмная тема - цвет текста меню */
+	--bg-color: #000028;
+	/* Тёмная тема - фон */
+	/* --bg-text-accent: transparent; */
+	/* фон выделения текста в Тёмной теме  */
+	--header-bg-title: #FF0070;
+	/* Тёмная тема - фон заголовка */
+	--text-color: #ff0070;
+	/* Тёмная тема - текст */
+	--accent-color: #DB00FF;
+	/* Тёмная тема - акцент */
+	--header-nav-color: #ff0070;
+	/* Тёмная тема - цвет текста меню */
 	--header-nav-color-rgb: 255, 0, 112;
-	--header-name-color: #DB00FF; /* Тёмная тема - цвет заголовка */
-	--text-shadow-color: #ff0070; /* Тёмная тема - тень текста */
-	--text-size: 18px; /* размер шрифта */ 
-	--title-text-font-weight: 700; /* толщина шрифта заголовка 2 */
-	--main-title-color: #ff0070; /* цвет заголовка в секции*/
-	--title-text-color: #000028; /* цвет шрифта заголовка 2 */
-	--main-title-accent: #000028; /* цвет заголовка 3 на выделеном фоне*/
-	--bg-title-color: #ff0070; /* фон заголовка 3*/
-	--main-text-color: #f1b2ce; /* цвет текста в параграфе*/
-	--main-text-accent: #ff0070; /* цвет выделенного слова в параграфе*/
+	--header-name-color: #DB00FF;
+	/* Тёмная тема - цвет заголовка */
+	--text-shadow-color: #ff0070;
+	/* Тёмная тема - тень текста */
+	--text-size: 18px;
+	/* размер шрифта */
+	--title-text-font-weight: 700;
+	/* толщина шрифта заголовка 2 */
+	--main-title-color: #ff0070;
+	/* цвет заголовка в секции*/
+	--title-text-color: #000028;
+	/* цвет шрифта заголовка 2 */
+	--main-title-accent: #000028;
+	/* цвет заголовка 3 на выделеном фоне*/
+	--bg-title-color: #ff0070;
+	/* фон заголовка 3*/
+	--main-text-color: #f1b2ce;
+	/* цвет текста в параграфе*/
+	--main-text-accent: #ff0070;
+	/* цвет выделенного слова в параграфе*/
 	--rec-visible: visible;
 }
 
 .theme-dark .page {
-	background-color: var(--bg-color);	
+	background-color: var(--bg-color);
+	background-image: var(--bg-image);
+	background-attachment: fixed;
 }
