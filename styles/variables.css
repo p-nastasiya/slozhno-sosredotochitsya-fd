@@ -16,8 +16,6 @@
 	/* Тёмная тема - фон картинка */
 	--background-color: var(--bg-color, #000028);
 	/* Тёмная тема - фон */
-	/* --bg-text-accent: transparent; */
-	/* фон выделения текста в Тёмной теме  */
 	--header-bg-title: #FF0070;
 	/* Тёмная тема - фон заголовка */
 	--text-color: #ff0070;

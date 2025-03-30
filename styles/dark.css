@@ -2,8 +2,6 @@
 	--bg-image: url(../images/cover-image-dark.png);
 	--bg-color: #000028;
 	/* Тёмная тема - фон */
-	/* --bg-text-accent: transparent; */
-	/* фон выделения текста в Тёмной теме  */
 	--header-bg-title: #FF0070;
 	/* Тёмная тема - фон заголовка */
 	--text-color: #ff0070;
@@ -17,10 +15,6 @@
 	/* Тёмная тема - цвет заголовка */
 	--text-shadow-color: #ff0070;
 	/* Тёмная тема - тень текста */
-	--text-size: 18px;
-	/* размер шрифта */
-	--title-text-font-weight: 700;
-	/* толщина шрифта заголовка 2 */
 	--main-title-color: #ff0070;
 	/* цвет заголовка в секции*/
 	--title-text-color: #000028;
