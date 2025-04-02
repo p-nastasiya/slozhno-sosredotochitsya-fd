@@ -52,7 +52,7 @@ main {
 .lamp {
 	position: absolute;
 	right: 12px;
-	line-height: 26px;
+	line-height: var(--line-height);
 	text-transform: uppercase;
 }
 
@@ -233,6 +233,7 @@ p>a:focus {
 
 	p {
 		margin-bottom: 20px;
+		line-height: var(--line-height);
 
 		&:last-child {
 			margin-bottom: 0;
