@@ -159,7 +159,6 @@ main {
 
 }
 
-
 .header__theme-menu-button:disabled {
 	pointer-events: none;
 }
