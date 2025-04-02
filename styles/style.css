@@ -283,6 +283,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		padding: 20px;
+		block-size: 100vh;
 	}
 
 	/* Правый верхний уголок */
