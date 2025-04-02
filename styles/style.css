@@ -166,7 +166,7 @@ main {
 	padding-block-start: 65px;
 	padding-bottom: 55px;
 	font-weight: var(--title-text-font-weight);
-	/* line-height: var(--title-font-height); */
+	line-height: var(--title-font-height);
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	text-shadow: 4px 4px 0 var(--text-shadow-color);
 	color: var(--header-name-color);
