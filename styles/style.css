@@ -11,6 +11,7 @@ body {
 	background-attachment: fixed;
 	background-position: top center;
 	font-family: var(--title-font-family, monospace);
+	line-height: var(--line-height);
 }
 
 main {
@@ -52,7 +53,7 @@ main {
 .lamp {
 	position: absolute;
 	right: 12px;
-	line-height: var(--line-height);
+	/* line-height: var(--line-height); */
 	text-transform: uppercase;
 }
 
@@ -165,7 +166,7 @@ main {
 	padding-block-start: 65px;
 	padding-bottom: 55px;
 	font-weight: var(--title-text-font-weight);
-	line-height: var(--title-font-height);
+	/* line-height: var(--title-font-height); */
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 	text-shadow: 4px 4px 0 var(--text-shadow-color);
 	color: var(--header-name-color);
@@ -195,6 +196,7 @@ main {
 .section-content-title {
 	margin-bottom: 10px;
 }
+
 .mb20 {
 	margin-bottom: 20px;
 }
@@ -209,7 +211,7 @@ main {
 p {
 	color: var(--main-text-color);
 	font-weight: var(--text-font-weight);
-	line-height: var(--line-height);
+	/* line-height: var(--line-height); */
 }
 
 p>a {
@@ -233,7 +235,7 @@ p>a:focus {
 
 	p {
 		margin-bottom: 20px;
-		line-height: var(--line-height);
+		/* line-height: var(--line-height); */
 
 		&:last-child {
 			margin-bottom: 0;
@@ -268,7 +270,7 @@ footer {
 
 .footer__name {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-	line-height: var(--title-font-height);
+	/* line-height: var(--title-font-height); */
 	color: var(--header-name-color);
 	text-shadow: 2px 2px 0 var(--text-shadow-color);
 }
