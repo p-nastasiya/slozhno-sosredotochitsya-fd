@@ -13,7 +13,6 @@
 	/* размер шрифта */
 	--line-height: 23.4px;
 	--bg-image: url(../images/cover-image-dark.png);
-	/* Тёмная тема - фон картинка */
 	--bg-color: #000028;
 	/* Тёмная тема - фон */
 	--header-bg-title: #ff0070;
@@ -34,7 +33,7 @@
 	--title-text-color: #000028;
 	/* цвет шрифта заголовка 2 */
 	--main-title-accent: #000028;
-	/* цвет заголовка 3 на выделеном фоне*/
+	/*цвет заголовка 3 на выделеном фоне*/
 	--bg-title-color: #ff0070;
 	/* фон заголовка 3*/
 	--main-text-color: #f1b2ce;

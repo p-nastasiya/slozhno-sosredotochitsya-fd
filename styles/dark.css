@@ -1,4 +1,4 @@
-.theme-dark {
+:root.theme-dark {
 	--bg-image: url(../images/cover-image-dark.png);
 	--bg-color: #000028;
 	/* Тёмная тема - фон */
@@ -30,13 +30,13 @@
 	--rec-visible: visible;
 }
 
-page .theme-dark {
+.theme-dark .page {
 	--bg-image: url(../images/cover-image-dark.png);
 	--bg-color: #000028;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root .theme-dark {
+	:root.theme-dark {
 		--bg-image: url(../images/cover-image-dark.png);
 		--bg-color: var(--bg-color);
 		/* Тёмная тема - фон */

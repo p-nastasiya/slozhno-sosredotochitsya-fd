@@ -53,7 +53,7 @@ main {
 .lamp {
 	position: absolute;
 	right: 12px;
-	/* line-height: var(--line-height); */
+	line-height: var(--line-height);
 	text-transform: uppercase;
 }
 
@@ -235,7 +235,6 @@ p>a:focus {
 
 	p {
 		margin-bottom: 20px;
-		/* line-height: var(--line-height); */
 
 		&:last-child {
 			margin-bottom: 0;
@@ -259,7 +258,7 @@ p>a:focus {
 footer {
 	position: relative;
 	margin-block-start: 40px;
-	/* block-size: 100vh; */
+	block-size: 100vh;
 	min-height: 668px;
 	display: flex;
 	flex-wrap: nowrap;
@@ -270,7 +269,7 @@ footer {
 
 .footer__name {
 	font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-	/* line-height: var(--title-font-height); */
+	line-height: var(--title-font-height);
 	color: var(--header-name-color);
 	text-shadow: 2px 2px 0 var(--text-shadow-color);
 }
@@ -286,7 +285,6 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		padding: 20px;
-		/* block-size: 100vh; */
 	}
 
 	/* Правый верхний уголок */
@@ -341,7 +339,7 @@ footer {
 
 	.content-section:nth-child(odd) {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 315px 2fr;
 		gap: 20px;
 
 		h2, h3 {
@@ -419,9 +417,6 @@ footer {
 		/* занимает вторую строку */
 	}
 
-	footer {
-		block-size: 100vh;
-	}
 	.footer__name {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
