@@ -30,16 +30,8 @@
 	--rec-visible: hidden;
 }
 
-.theme-light .page {
-	background-color: var(--bg-color);
-	background-image: var(--bg-image);
-	background-attachment: fixed;
-}
-
-
-
 @media (prefers-color-scheme: light) {
-	:root {
+	:root .theme-light{
 		--bg-image: url(../images/cover-image-light.png);
 		/* Светлая тема - фон картинка */
 		--bg-color: #fff1f7;

@@ -1,7 +1,7 @@
 body {
 	background-color: var(--bg-color);
 	color: var(--text-color);
-	font-family: var(--title-font-family);
+	font-family: var(--title-font-family, monospace);
 }
 
 .page {
@@ -10,7 +10,7 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: top center;
-	font-family: var(--title-font-family);
+	font-family: var(--title-font-family, monospace);
 }
 
 main {
@@ -21,6 +21,8 @@ main {
 .header {
 	position: relative;
 	padding: 10px 10px 66px 10px;
+	block-size: 100vh;
+	min-height: 668px;
 }
 
 /* Правый верхний уголок */
@@ -49,22 +51,34 @@ main {
 
 .lamp {
 	position: absolute;
-	right: 13px;
+	right: 12px;
 	line-height: 26px;
-	grid-row: 1;
 	text-transform: uppercase;
-	display: flex;
-	justify-content: flex-end;
-	flex-direction: row;
-	gap: 5px;
-	color: var(--header-nav-color);
+}
+
+.rec {
+	display: inline-flex;
+	align-items: center;
+	visibility: var(--rec-visible);
+	gap: 3px;
+}
+
+.rec::after {
+	content: "";
+	width: 9px;
+	height: 9px;
+	background-color: var(--header-nav-color);
+	border-radius: 50%;
+	box-shadow: 0 0 0 1px rgba(255, 0, 112, 0.5), 0 0 0 2.5px rgba(255, 0, 112, 0.3), 0 0 0 4px rgba(255, 0, 112, 0.1);
+	visibility: var(--rec-visible);
+	display: block;
+	margin: 7px;
 }
 
 /* Стили для контейнера чекбокса */
 .checkbox-container {
 	display: flex;
 	align-items: center;
-	cursor: pointer;
 }
 
 /* Скрыть стандартный чекбокс */
@@ -102,10 +116,6 @@ main {
 	padding-top: 65px;
 }
 
-.rec {
-	visibility: var(--rec-visible);
-}
-
 .header__theme-menu-list {
 	list-style: none;
 	display: flex;
@@ -125,13 +135,12 @@ main {
 	text-transform: lowercase;
 }
 
-
 .header__theme-menu-button:focus-visible {
 	border-bottom: 1px solid var(--header-nav-color);
 	/* Рамка только снизу при фокусе */
 }
 
-.header__theme-menu-button:hover {
+.header__theme-menu-button_auto:hover {
 	border: 1px solid rgba(var(--header-nav-color-rgb), 0.4);
 }
 
@@ -142,16 +151,17 @@ main {
 	/* Рамка для активной кнопки */
 }
 
+.header__theme-menu-button_type_auto {
+	background-color: var(--bg-color);
+	/* Светлый цвет фона */
+	color: var(--text-color);
+	/* Темный цвет текста */
+
+}
+
+
 .header__theme-menu-button:disabled {
 	pointer-events: none;
-}
-
-.strong:hover {
-	border-bottom: 1px solid var(--header-nav-color);
-}
-
-.strong:focus {
-	border: 1px solid var(--header-nav-color);
 }
 
 .header__name {
@@ -175,16 +185,15 @@ main {
 	font-weight: var(--title-text-font-weight);
 }
 
-
-section {
+.grid-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 50px;
 	margin-top: 40px;
-	padding-bottom: 10px;
-	line-height: var(--line-height);
 }
 
 .main-title {
 	font-weight: var(--title-text-font-weight);
-	padding-bottom: 20px;
 }
 
 .section-content-title {
@@ -204,38 +213,33 @@ p {
 	font-weight: var(--text-font-weight);
 }
 
-.content-section-why {
+p>a {
+	text-decoration: none;
+	text-shadow: 2px 2px 0px var(--main-text-accent);
+}
+
+p>a:hover {
+	border-bottom: 1px solid var(--header-nav-color);
+}
+
+p>a:focus {
+	border: 1px solid var(--header-nav-color);
+	outline: none;
+}
+
+.content-section, .gallery-section {
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap: 20px;
-}
 
-.grid-container-what {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 20px;
-}
+	p {
+		margin-bottom: 10px;
 
-.content-section-how {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 20px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
-
-.strong {
-	position: relative;
-	z-index: 0;
-	text-decoration: none;
-}
-
-.strong-color {
-	position: absolute;
-	left: 2px;
-	top: 1px;
-	color: var(--main-text-accent);
-	z-index: -1;
-}
-
 
 .gallery {
 	display: flex;
@@ -254,8 +258,8 @@ footer {
 	position: relative;
 	margin-block-start: 40px;
 	block-size: 100vh;
+	min-height: 668px;
 	display: flex;
-	background-color: var(--bg-color);
 	flex-wrap: nowrap;
 	flex-direction: column;
 	justify-content: space-around;
@@ -267,10 +271,6 @@ footer {
 	line-height: var(--title-font-height);
 	color: var(--header-name-color);
 	text-shadow: 2px 2px 0 var(--text-shadow-color);
-}
-
-.mb20 {
-	margin-bottom: 20px;
 }
 
 /* Медиазапросы для адаптива */
@@ -299,7 +299,8 @@ footer {
 	}
 
 	.lamp {
-		right: 23px;
+		right: 21px;
+		top: 20px;
 	}
 
 	.header__theme-menu {
@@ -312,7 +313,6 @@ footer {
 		grid-column: 1 / span 2;
 		padding-block-start: 173px;
 		padding-bottom: 162px;
-		font-weight: var(--title-text-font-weight);
 		margin-left: -13px;
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
@@ -322,47 +322,45 @@ footer {
 		margin-bottom: 163px;
 	}
 
-
-	.grid-section-why {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		gap: 20px;
-	}
-
-	.main-title {
-		grid-column: 1;
-		max-width: 236px;
-	}
-
-	.content-section-why {
-		grid-column: 2;
-		display: grid;
-		gap: 20px;
-	}
-
-	section {
+	.grid-section {
+		row-gap: 80px;
 		margin-top: 60px;
-		padding-bottom: 20px;
-		line-height: var(--line-height);
 	}
 
-	.grid-section-what {
-		display: block;
+	.content-section {
+		p {
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
-	.grid-container-what {
-		display: grid;
-		gap: 20px;
-	}
-
-	.grid-section-how {
+	.content-section:nth-child(odd) {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		gap: 20px;
+
+		h2, h3 {
+			grid-column: 1;
+		}
+
+		div {
+			grid-column: 2;
+		}
 	}
 
-	.content-section-how {
-		grid-column: 2;
+	.content-section:nth-child(even) {
+		display: grid;
+		gap: 20px;
+		grid-template-rows: auto;
+		grid-template-columns: 1fr;
+
+		.main-title {
+			grid-column: 1;
+			max-width: 236px;
+		}
 	}
 
 	.gallery {
@@ -429,7 +427,7 @@ footer {
 	.header {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		height: 100vh;
+		/* height: 100vh; */
 	}
 
 	.header__theme-menu {
@@ -459,22 +457,19 @@ footer {
 		justify-self: end;
 	}
 
-	.content-section-why .content-section-how {
-		grid-column: 2 / 4;
-	}
-
-	.section-content-title {
-		margin-bottom: 10px;
-	}
-
-	.mb20 {
-		margin-bottom: 20px;
-	}
-
-	.grid-container-what {
+	.content-section:nth-child(even) {
 		display: grid;
+		gap: 20px;
+		grid-template-rows: auto 1fr;
 		grid-template-columns: repeat(3, 1fr);
-		column-gap: 18px;
+
+		.main-title {
+			grid-row: 1;
+		}
+
+		div {
+			grid-row: 2;
+		}
 	}
 
 	.main-title {
