@@ -30,10 +30,15 @@
 	--rec-visible: visible;
 }
 
+page .theme-dark {
+	--bg-image: url(../images/cover-image-dark.png);
+	--bg-color: #000028;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root .theme-dark {
 		--bg-image: url(../images/cover-image-dark.png);
-		--bg-color: #000028;
+		--bg-color: var(--bg-color);
 		/* Тёмная тема - фон */
 		--header-bg-title: #ff0070;
 		/* Тёмная тема - фон заголовка */
