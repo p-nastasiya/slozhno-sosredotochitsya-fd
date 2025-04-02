@@ -339,7 +339,7 @@ footer {
 
 	.content-section:nth-child(odd) {
 		display: grid;
-		grid-template-columns: 315px 2fr;
+		grid-template-columns: 236px 2fr;
 		gap: 20px;
 
 		h2, h3 {
