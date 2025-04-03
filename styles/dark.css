@@ -38,7 +38,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--bg-image: url(../images/cover-image-dark.png);
-		--bg-color: var(--bg-color);
+		--bg-color: #000028;
 		/* Тёмная тема - фон */
 		--header-bg-title: #ff0070;
 		/* Тёмная тема - фон заголовка */

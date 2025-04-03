@@ -360,8 +360,7 @@ footer {
 
 		.main-title {
 			grid-column: 1;
-			max-width: 236px;
-			/* min-width: 315px; */
+			width: 236px;
 		}
 	}
 
@@ -479,11 +478,11 @@ footer {
 		display: grid;
 		gap: 20px;
 		grid-template-rows: auto 1fr;
-		grid-template-columns: 315px 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 
 		.main-title {
 			grid-row: 1;
-			min-width: 315px;
+			width: 355px;
 		}
 
 		div {
