@@ -22,7 +22,7 @@ main {
 .header {
 	position: relative;
 	padding: 10px 10px 66px 10px;
-	/* block-size: 100vh; */
+	block-size: 100vh;
 	min-height: 668px;
 }
 
@@ -418,7 +418,7 @@ footer {
 		grid-row: 2;
 		/* занимает вторую строку */
 	}
-	
+
 	footer {
 		margin-block-start: 60px;
 	}
@@ -464,7 +464,7 @@ footer {
 		justify-self: end;
 	}
 
-	.content-section{
+	.content-section {
 		grid-template-columns: 315px 1fr;
 	}
 	
