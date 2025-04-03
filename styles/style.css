@@ -22,7 +22,7 @@ main {
 .header {
 	position: relative;
 	padding: 10px 10px 66px 10px;
-	block-size: 100vh;
+	/* block-size: 100vh; */
 	min-height: 668px;
 }
 
@@ -339,8 +339,9 @@ footer {
 
 	.content-section:nth-child(odd) {
 		display: grid;
-		grid-template-columns: 236px 2fr;
-		gap: 20px;
+		grid-template-columns: 1fr 2fr;
+		row-gap: 20px;
+		column-gap: 20px;
 
 		h2, h3 {
 			grid-column: 1;
@@ -360,6 +361,7 @@ footer {
 		.main-title {
 			grid-column: 1;
 			max-width: 236px;
+			/* min-width: 315px; */
 		}
 	}
 
@@ -416,6 +418,10 @@ footer {
 		grid-row: 2;
 		/* занимает вторую строку */
 	}
+	
+	footer {
+		margin-block-start: 60px;
+	}
 
 	.footer__name {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -428,6 +434,7 @@ footer {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		/* height: 100vh; */
+		padding: 20px 20px 0 20px;
 	}
 
 	.header__theme-menu {
@@ -457,6 +464,17 @@ footer {
 		justify-self: end;
 	}
 
+	.content-section{
+		grid-template-columns: 315px 1fr;
+	}
+	
+	.content-section:nth-child(odd) {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		row-gap: 20px;
+		column-gap: 12px;
+	}
+
 	.content-section:nth-child(even) {
 		display: grid;
 		gap: 20px;
@@ -465,7 +483,7 @@ footer {
 
 		.main-title {
 			grid-row: 1;
-			min-width: 336px;
+			min-width: 315px;
 		}
 
 		div {
