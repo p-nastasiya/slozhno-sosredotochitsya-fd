@@ -482,7 +482,7 @@ footer {
 
 		.main-title {
 			grid-row: 1;
-			width: 355px;
+			min-width: 315px;
 		}
 
 		div {
