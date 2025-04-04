@@ -21,7 +21,7 @@ main {
 
 .header {
 	position: relative;
-	padding: 10px 10px 66px 10px;
+	padding: 10px 10px 0 10px;
 	block-size: 100vh;
 	min-height: 668px;
 }
@@ -197,7 +197,7 @@ main {
 	margin-bottom: 10px;
 }
 
-.mb20 {
+.section-content-title_type_additional-margin {
 	margin-bottom: 20px;
 }
 
@@ -328,16 +328,6 @@ footer {
 	}
 
 	.content-section {
-		p {
-			margin-bottom: 20px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-
-	.content-section:nth-child(odd) {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		row-gap: 20px;
@@ -347,15 +337,18 @@ footer {
 			grid-column: 1;
 		}
 
-		div {
-			grid-column: 2;
+		p {
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
-	.content-section:nth-child(even) {
+	.content-section_type_secondary {
 		display: grid;
 		gap: 20px;
-		grid-template-rows: auto;
 		grid-template-columns: 1fr;
 
 		.main-title {
@@ -420,6 +413,7 @@ footer {
 
 	footer {
 		margin-block-start: 60px;
+		min-height: 1024px;
 	}
 
 	.footer__name {
@@ -432,7 +426,6 @@ footer {
 	.header {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		/* height: 100vh; */
 		padding: 20px 20px 0 20px;
 	}
 
@@ -464,21 +457,17 @@ footer {
 	}
 
 	.content-section {
-		grid-template-columns: 315px 1fr;
-	}
-	
-	.content-section:nth-child(odd) {
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 315px 1fr;
 		row-gap: 20px;
 		column-gap: 12px;
 	}
 
-	.content-section:nth-child(even) {
+	.content-section_type_secondary {
 		display: grid;
 		gap: 20px;
-		grid-template-rows: auto 1fr;
 		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto 1fr;
 
 		.main-title {
 			grid-row: 1;
@@ -497,7 +486,6 @@ footer {
 	.footer__name {
 		font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
 	}
-
 }
 
 /* Общие стили для цветового переключателя */
