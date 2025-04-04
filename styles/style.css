@@ -413,7 +413,7 @@ footer {
 
 	footer {
 		margin-block-start: 60px;
-		min-height: 1024px;
+		/* min-height: 1024px; */
 	}
 
 	.footer__name {
@@ -460,7 +460,7 @@ footer {
 		display: grid;
 		grid-template-columns: 315px 1fr;
 		row-gap: 20px;
-		column-gap: 12px;
+		column-gap: 20px;
 	}
 
 	.content-section_type_secondary {
