@@ -282,7 +282,7 @@ footer {
 
 	.header {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr min-content 1fr;
 		padding: 20px;
 	}
 
@@ -304,12 +304,10 @@ footer {
 	}
 
 	.header__theme-menu {
-		grid-column: 2;
 		padding-top: 170px;
 	}
 
 	.header__name {
-		grid-column: 1 / span 2;
 		padding-block-start: 173px;
 		padding-bottom: 162px;
 		margin-left: -19px;
@@ -317,7 +315,8 @@ footer {
 	}
 
 	.header__title {
-		grid-column: 2;
+		inline-size: 364px;
+		justify-self: end;
 		margin-bottom: 163px;
 	}
 
@@ -423,13 +422,10 @@ footer {
 /* Меняем сетку для больших экранов */
 @media (min-width: 1024px) {
 	.header {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
 		padding: 20px 20px 0 20px;
 	}
 
 	.header__theme-menu {
-		grid-column: 2;
 		padding: 0;
 		display: flex;
 		justify-content: center;
@@ -441,7 +437,6 @@ footer {
 	}
 
 	.header__name {
-		grid-column: 1 / span 3;
 		padding-block-start: 273px;
 		padding-bottom: 114px;
 		margin-left: -20px;
@@ -449,10 +444,8 @@ footer {
 	}
 
 	.header__title {
-		grid-column: 2 /span 3;
 		margin-block-end: 134px;
 		inline-size: 491px;
-		max-block-size: 71px;
 		justify-self: end;
 	}
 
