@@ -27,6 +27,8 @@
 	/* цвет текста в параграфе*/
 	--main-text-accent: #ff0070;
 	/* цвет выделенного слова в параграфе*/
+	--main-text-border: #f1b2ce;
+	/* Рамка текста ссылки в тексте*/
 	--rec-visible: visible;
 }
 
@@ -65,6 +67,7 @@
 		/* цвет текста в параграфе*/
 		--main-text-accent: #ff0070;
 		/* цвет выделенного слова в параграфе*/
+		--main-text-border: #f1b2ce;
 		--rec-visible: visible;
 	}
 }

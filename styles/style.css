@@ -211,7 +211,6 @@ main {
 p {
 	color: var(--main-text-color);
 	font-weight: var(--text-font-weight);
-	/* line-height: var(--line-height); */
 }
 
 p>a {
@@ -220,11 +219,11 @@ p>a {
 }
 
 p>a:hover {
-	border-bottom: 1px solid var(--header-nav-color);
+	border-bottom: 1px solid var(--main-text-border);
 }
 
 p>a:focus {
-	border: 1px solid var(--header-nav-color);
+	border: 1px solid var(--main-text-border);
 	outline: none;
 }
 
@@ -453,7 +452,7 @@ footer {
 		grid-column: 2 /span 3;
 		margin-block-end: 134px;
 		inline-size: 491px;
-		block-size: 71px;
+		max-block-size: 71px;
 		justify-self: end;
 	}
 
